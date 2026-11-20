@@ -13,4 +13,9 @@ provider "aws" {
 
 resource "aws_s3_bucket" "version_control_demo" {
   bucket = "my-tf-git-demo-bucket-unique-12345"
+
+  tags = {
+    Environment = "Dev"
+    ManagedBy   = "Terraform"
+  }
 }
